@@ -65,6 +65,11 @@
 
   footer { text-align: center; margin-top: 32px; color: var(--suave); font-size: .85rem; }
   .nota { font-size: .8rem; color: var(--suave); margin-top: 12px; }
+
+  .galeria-fotos { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 14px; }
+  .ejemplo-foto { margin: 0; padding: 10px; border: 1px solid var(--borde); border-radius: 12px; background: #fff; }
+  .ejemplo-foto img { display: block; width: 100%; height: auto; }
+  .ejemplo-foto figcaption { color: #16203a; font-weight: 700; text-align: center; padding: 5px 0 0; }
 </style>
 </head>
 <body>
@@ -79,7 +84,18 @@
 <div class="envoltura">
 
   <nav class="enlaces" aria-label="Contacto y redes">
-    <!-- 1) WhatsApp: cambia 52XXXXXXXXXX por tu número a 10 dígitos con el 52 al inicio, sin espacios ni signos. -->
+    <a class="boton" style="--c:#c13584" href="https://instagram.com/lapazimpresion3d">
+      <span class="ini" aria-hidden="true">I</span>
+      <span>Instagram<small>@lapazimpresion3d</small></span>
+    </a>
+    <a class="boton" style="--c:#1877f2" href="https://www.facebook.com/profile.php?id=61587977253393">
+      <span class="ini" aria-hidden="true">F</span>
+      <span>Facebook<small>Mira nuestros trabajos</small></span>
+    </a>
+    <a class="boton" style="--c:#e6a800" href="ejemplos.html">
+      <span class="ini" aria-hidden="true">▦</span>
+      <span>Ver ejemplos de llaveros<small>Fotografías, celebraciones, talleres y cafeterías</small></span>
+    </a>
     <a class="boton" style="--c:#128c4a" href="https://wa.me/526121999963?text=Hola%2C%20vi%20su%20informaci%C3%B3n%20y%20quiero%20cotizar%20llaveros">
       <span class="ini" aria-hidden="true">W</span>
       <span>Cotiza por WhatsApp<small>Respondemos con una propuesta digital</small></span>
@@ -87,15 +103,6 @@
     <a class="boton" style="--c:#1673c9" href="./contacto.vcf" type="text/vcard">
       <span class="ini" aria-hidden="true">+</span>
       <span>Guardar contacto<small>Agrega nuestros datos a tu teléfono</small></span>
-    </a>
-    <a class="boton" style="--c:#c13584" href="https://instagram.com/lapazimpresion3d">
-      <span class="ini" aria-hidden="true">I</span>
-      <span>Instagram<small>@lapazimpresion3d</small></span>
-    </a>
-    <!-- 2) Facebook: pega aquí el enlace de tu página. -->
-    <a class="boton" style="--c:#1877f2" href="https://www.facebook.com/profile.php?id=61587977253393">
-      <span class="ini" aria-hidden="true">F</span>
-      <span>Facebook<small>Mira nuestros trabajos</small></span>
     </a>
   </nav>
 
@@ -133,6 +140,8 @@
     <div class="caja">
       <dl>
         <div><dt>Diseños desde fotografías</dt><dd>Convertimos tu foto, mascota o dibujo en llavero.</dd></div>
+      </dl>
+      <dl style="margin-top:16px">
         <div><dt>Código QR o chip NFC</dt><dd>El QR se escanea con la cámara y el chip NFC se acerca a un teléfono compatible.</dd></div>
         <div><dt>Menú digital para tu negocio</dt><dd>Una base de mostrador con QR o NFC que reúne tus enlaces: menú, reseñas en Google, redes sociales y WhatsApp.</dd></div>
       </dl>
