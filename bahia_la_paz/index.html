@@ -187,7 +187,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
       <form id="f">
         <label>Nombre<input id="n" required autocomplete="name"></label>
         <label>Fecha deseada<input id="d" type="date" required></label>
-        <label>Personas (no se admiten niños)<input id="p" type="number" min="1" max="12" value="6" required></label>
+        <label>Personas<span class="note">Máximo 12 personas, (no se admiten niños).</span><input id="p" type="number" min="1" max="12" value="6" required></label>
         <label>Comentarios<textarea id="c" rows="2" placeholder="Cumpleaños, hora preferida…"></textarea></label>
         <button class="btn" type="submit">Enviar por WhatsApp</button>
       </form>
