@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bahía La Paz Paseos Recreativos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#F6EFE0;--ink:#0A2F3A;--muted:#4A6670;--sea:#0E7C86;--deep:#0A2F3A;--sun:#F2B544;--line:#D9CDB4;--card:#FFFBF1;--on-deep:#F6EFE0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#071F27;--ink:#F1E9D6;--muted:#9DB5BB;--sea:#3FB9C3;--deep:#04141A;--line:#1B424D;--card:#0B2B35;--on-deep:#F1E9D6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#071F27;--ink:#F1E9D6;--muted:#9DB5BB;--sea:#3FB9C3;--deep:#04141A;--line:#1B424D;--card:#0B2B35;--on-deep:#F1E9D6;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;font-weight:600}
+nav a{text-decoration:none}
+nav .btn{padding:.5rem 1rem}
+.btn{display:inline-block;background:var(--sun);color:#0A2F3A;font-weight:700;text-decoration:none;padding:.9rem 1.5rem;border-radius:999px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{filter:brightness(1.06)}
+.hero{background:var(--deep);color:var(--on-deep);position:relative;overflow:hidden}
+.hero .wrap{padding-top:.5rem;padding-bottom:0}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3rem,10vw,6.5rem);font-weight:600;letter-spacing:-.01em;max-width:11ch;margin-top:2.5rem}
+.hero p.lead{max-width:34rem;font-size:1.2rem;opacity:.9;margin:1.25rem 0 1.75rem}
+.facts{display:flex;gap:2rem;flex-wrap:wrap;margin:2rem 0 0;padding:0;list-style:none}
+.facts li{font-family:'Bricolage Grotesque',sans-serif;font-size:1.4rem;font-weight:700}
+.facts span{display:block;font:500 .9rem Figtree,sans-serif;opacity:.7}
+.sea{display:block;width:100%;height:auto;margin-top:0;position:relative;z-index:1}
+.boat{display:block;width:min(460px,82%);height:auto;margin:2rem auto calc(-10.8vw - 00.127 * min(460px, 82vw));position:relative;z-index:2;animation:bob 5s ease-in-out infinite;transform-origin:center}
+@keyframes bob{50%{transform:translateY(7px) rotate(-1.2deg)}}
+@media (prefers-reduced-motion:reduce){.boat{animation:none}html{scroll-behavior:auto}}
+.ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn.alt{background:transparent;color:inherit;border:2px solid currentColor;padding:calc(.9rem - 2px) calc(1.5rem - 2px)}
+.wa-float{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:20;background:#25D366;color:#06301A;font-weight:700;text-decoration:none;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+section{padding:4.5rem 0}
+h2{font-size:clamp(1.9rem,5vw,3rem);letter-spacing:-.02em;margin-bottom:1rem}
+.sub{color:var(--muted);max-width:36rem;margin:0 0 2rem}
+.incl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem 2rem;list-style:none;padding:0;margin:0}
+.incl li{border-top:3px solid var(--sea);padding-top:.75rem}
+.incl b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem}
+.incl span{color:var(--muted)}
+.time{list-style:none;margin:0;padding:0;border-left:3px solid var(--sea)}
+.time li{padding:0 0 1.75rem 1.5rem;position:relative}
+.time li::before{content:"";position:absolute;left:-9px;top:.45rem;width:15px;height:15px;border-radius:50%;background:var(--sun);border:3px solid var(--bg)}
+.time b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.25rem}
+.time em{font-style:normal;color:var(--sea);font-weight:600;margin-left:.5rem}
+.book{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:2rem;display:grid;gap:2rem;grid-template-columns:1fr;max-width:100%}
+@media(min-width:760px){.book{grid-template-columns:1fr 1fr;align-items:start}}
+form{display:grid;gap:1rem}
+label{font-weight:600;display:grid;gap:.35rem}
+input,select,textarea{font:inherit;padding:.75rem;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.price{font-family:'Bricolage Grotesque',sans-serif;font-size:2.6rem;font-weight:800}
+.note{color:var(--muted);font-size:.95rem}
+details{border-top:1px solid var(--line);padding:1rem 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{font-weight:600;cursor:pointer}
+details p{margin:.6rem 0 0;color:var(--muted)}
+footer{background:var(--deep);color:var(--on-deep);padding:2rem 0;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <a href="#inicio">Bahía La Paz · Paseos recreativos</a>
+      <a class="btn" href="#reservar">Reservar</a>
+    </nav>
+    <h1 id="inicio">La mejor experiencia en la bahía.</h1>
+    <p class="lead">Un paseo privado en barco para hasta 12 personas. Sin prisas, sin multitudes: solo tu grupo, el mar y el horizonte.</p>
+    <div class="ctas">
+      <a class="btn" href="#reservar">Reserva tu paseo</a>
+      <a class="btn alt" href="https://wa.me/526121528402?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20paseo%20en%20barco" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn alt" href="https://instagram.com/bahia_la_paz" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <ul class="facts">
+      <li>Máximo 12<span>personas por salida</span></li>
+      <li>4 horas<span>en el agua</span></li>
+      <li>Privado<span>solo tu grupo</span></li>
+    </ul>
+  </div>
+  <img class="boat" width="760" height="483" alt="Chubasco, el barco de los paseos por la bahía" src="images/chubasco.webp">
+  <svg class="sea" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    
+    <path d="M0 130 C200 110 380 150 600 130 S1000 110 1200 130 V220 H0Z" fill="#0E7C86"/>
+    <path d="M0 158 C220 140 420 180 640 160 S1000 142 1200 162 V220 H0Z" fill="#0A5D69"/>
+    <path d="M0 190 C260 176 480 208 700 190 S1040 178 1200 192 V220 H0Z" fill="#F6EFE0"/>
+  </svg>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>Todo para un buen día de mar</h2>
+    <p class="sub">Un paseo recreativo pensado para grupos de amigos, parejas y celebraciones pequeñas entre adultos.</p>
+    <ul class="incl">
+      <li><b>Capitán y tripulación</b><span>Personal con experiencia en la bahía.</span></li>
+      <li><b>Chalecos salvavidas</b><span>Para todas las personas a bordo.</span></li>
+      <li><b>Hielera y agua</b><span>Trae tus bebidas y botanas; nosotros las mantenemos frías.</span></li>
+      <li><b>Paradas para nadar</b><span>Fondeamos en aguas tranquilas para que te metas al mar.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section style="background:var(--card)">
+  <div class="wrap">
+    <h2>Así pasan las 4 horas</h2>
+    <p class="sub">Un ritmo tranquilo. El capitán ajusta el recorrido según el viento y el ánimo del grupo.</p>
+    <ol class="time">
+      <li><b>Zarpe</b><em>Hora 0</em><br><span class="note">Abordaje, indicaciones de seguridad y salida de la marina.</span></li>
+      <li><b>Navegar la bahía</b><em>Hora 1</em><br><span class="note">Recorrido por la costa con vista a la ciudad y a las islas.</span></li>
+      <li><b>Parada para nadar</b><em>Hora 2</em><br><span class="note">Fondeo en aguas calmas: nadar, esnorquelear, comer algo.</span></li>
+      <li><b>Regreso al atardecer</b><em>Hora 3 a 4</em><br><span class="note">Navegación de vuelta y llegada a puerto.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="reservar">
+  <div class="wrap">
+    <h2>Reserva tu salida</h2>
+    <p class="sub">Elige fecha y número de personas. Te responderemos por WhatsApp para confirmar.</p>
+    <div class="book">
+      <div>
+        <div class="price">Desde $12,000 MXN</div>
+        <p class="note">Paseos privados: el barco completo para tu grupo, hasta 12 personas, 4 horas.</p>
+        <p class="note">Anticipo para apartar la fecha. Si el clima no permite salir, reprogramamos sin costo.</p>
+      </div>
+      <form id="f">
+        <label>Nombre<input id="n" required autocomplete="name"></label>
+        <label>Fecha deseada<input id="d" type="date" required></label>
+        <label>Personas (no se admiten niños)<input id="p" type="number" min="1" max="12" value="6" required></label>
+        <label>Comentarios<textarea id="c" rows="2" placeholder="Cumpleaños, hora preferida…"></textarea></label>
+        <button class="btn" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Cuántas personas caben?</summary><p>Hasta 12 personas por salida.</p></details>
+    <details><summary>¿Pueden ir niños?</summary><p>No. Por ahora el paseo no admite niños.</p></details>
+    <details><summary>¿Puedo llevar comida y bebidas?</summary><p>Sí. Contamos con hielera para mantener todo frío.</p></details>
+    <details><summary>¿Qué pasa si hay mal clima?</summary><p>Si las condiciones no son seguras, reprogramamos tu paseo a otra fecha.</p></details>
+    <details><summary>¿A qué hora sale?</summary><p>Acordamos la hora contigo al confirmar la reserva.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Bahía La Paz Paseos Recreativos</span>
+    <span>Reservaciones: <a href="tel:+526121528402">612 152 8402</a> · <a href="tel:+526121999963">612 199 9963</a> · <a href="https://instagram.com/bahia_la_paz" rel="noopener">@bahia_la_paz</a></span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/526121528402?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20paseo%20en%20barco" target="_blank" rel="noopener">WhatsApp</a>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var tel='526121528402';
+  var m='Hola, quiero reservar un paseo en barco.\nNombre: '+n.value+'\nFecha: '+d.value+'\nPersonas: '+p.value+(c.value?'\nComentarios: '+c.value:'');
+  window.open('https://wa.me/'+tel+'?text='+encodeURIComponent(m),'_blank');
+});
+</script>
+</body>
+</html>
