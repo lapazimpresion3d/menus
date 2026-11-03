@@ -34,7 +34,6 @@ nav .btn{padding:.5rem 1rem}
 @media (prefers-reduced-motion:reduce){.boat{animation:none}html{scroll-behavior:auto}}
 .ctas{display:flex;gap:.75rem;flex-wrap:wrap}
 .btn.alt{background:transparent;color:inherit;border:2px solid currentColor;padding:calc(.9rem - 2px) calc(1.5rem - 2px)}
-.wa-float{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:20;background:#25D366;color:#06301A;font-weight:700;text-decoration:none;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
 section{padding:4.5rem 0}
 h2{font-size:clamp(1.9rem,5vw,3rem);letter-spacing:-.02em;margin-bottom:1rem}
 .sub{color:var(--muted);max-width:36rem;margin:0 0 2rem}
@@ -105,7 +104,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
   footer {padding:2.4rem 0 6rem;}
   footer .wrap {display:grid;gap:.85rem;}
   footer span {overflow-wrap:anywhere;}
-  .wa-float {right:1rem;bottom:calc(.85rem + env(safe-area-inset-bottom,0px));font-size:.9rem;padding:.68rem 1rem;}
 }
 @media (max-width: 355px) {
   .wrap {padding-inline:1.05rem;}
@@ -246,13 +244,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
 <span><span data-i18n="Reservaciones:">Reservaciones:</span><a href="tel:+526121528402">612 152 8402</a> · <a href="tel:+526121999963">612 199 9963</a> · <a href="https://instagram.com/bahia_la_paz" rel="noopener">@bahia_la_paz</a></span>
 </div>
 </footer>
-<a class="wa-float" href="https://wa.me/526121528402?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20paseo%20en%20barco" rel="noopener" target="_blank">WhatsApp</a>
 <script>
 const translations = {"Bahía La Paz · Paseos recreativos": "Bahía La Paz · Boat tours", "Paseos recreativos": "Boat tours", "Reservar": "Book", "La mejor experiencia en la bahía.": "The best experience on the bay.", "Un paseo privado en barco para hasta 12 personas. Sin prisas, sin multitudes: solo tu grupo, el mar y el horizonte.": "A private boat tour for up to 12 people. No rush, no crowds: just your group, the sea, and the horizon.", "Reserva tu paseo": "Book your tour", "Máximo 12": "Up to 12", "personas por salida": "people per trip", "4 horas": "4 hours", "en el agua": "on the water", "Privado": "Private", "solo tu grupo": "just your group", "Todo para un buen día de mar": "Everything for a great day at sea", "Un paseo recreativo pensado para grupos de amigos, parejas y celebraciones pequeñas entre adultos.": "A relaxing boat trip for groups of friends, couples, and small adult celebrations.", "Capitán y tripulación": "Captain and crew", "Personal con experiencia en la bahía.": "An experienced team that knows the bay.", "Chalecos salvavidas": "Life jackets", "Para todas las personas a bordo.": "For everyone on board.", "Hielera y agua": "Cooler and water", "Trae tus bebidas y botanas; nosotros las mantenemos frías.": "Bring your drinks and snacks; we’ll keep them cold.", "Paradas para nadar": "Swimming stops", "Fondeamos en aguas tranquilas para que te metas al mar.": "We anchor in calm waters so you can enjoy a swim.", "Así pasan las 4 horas": "Your 4-hour itinerary", "Un ritmo tranquilo. El capitán ajusta el recorrido según el viento y el ánimo del grupo.": "Enjoy a relaxed pace. The captain adjusts the route according to the wind and your group’s preferences.", "Zarpe": "Departure", "Hora 0": "Hour 0", "Abordaje, indicaciones de seguridad y salida de la marina.": "Boarding, safety briefing, and departure from the marina.", "Navegar la bahía": "Cruising the bay", "Hora 1": "Hour 1", "Recorrido por la costa con vista a la ciudad y a las islas.": "Cruise along the coast with views of the city and islands.", "Parada para nadar": "Swimming stop", "Hora 2": "Hour 2", "Fondeo en aguas calmas: nadar, esnorquelear, comer algo.": "Anchor in calm waters to swim, snorkel, or enjoy a snack.", "Regreso al atardecer": "Sunset return", "Hora 3 a 4": "Hours 3–4", "Navegación de vuelta y llegada a puerto.": "Cruise back and return to port.", "Reserva tu salida": "Book your trip", "Elige fecha y número de personas. Te responderemos por WhatsApp para confirmar.": "Choose your date and group size. We’ll confirm the details with you on WhatsApp.", "Desde $12,000 MXN": "From $12,000 MXN", "Paseos privados: el barco completo para tu grupo, hasta 12 personas, 4 horas.": "Private tours: the entire boat for your group, up to 12 people, for 4 hours.", "Anticipo para apartar la fecha. Si el clima no permite salir, reprogramamos sin costo.": "A deposit is required to reserve your date. If the weather prevents departure, we’ll reschedule at no extra cost.", "Nombre": "Name", "Fecha deseada": "Preferred date", "Personas": "Guests", "Máximo 12 personas, (no se admiten niños).": "Maximum 12 guests, (children are not allowed).", "Comentarios": "Comments", "Enviar por WhatsApp": "Send via WhatsApp", "Preguntas frecuentes": "Frequently asked questions", "¿Cuántas personas caben?": "How many people can come?", "Hasta 12 personas por salida.": "Up to 12 guests per trip.", "¿Pueden ir niños?": "Are children allowed?", "No. Por ahora el paseo no admite niños.": "No. Children are not allowed on these tours at this time.", "¿Puedo llevar comida y bebidas?": "Can I bring food and drinks?", "Sí. Contamos con hielera para mantener todo frío.": "Yes. We have a cooler to keep everything cold.", "¿Qué pasa si hay mal clima?": "What happens in bad weather?", "Si las condiciones no son seguras, reprogramamos tu paseo a otra fecha.": "If conditions are unsafe, we’ll reschedule your tour.", "¿A qué hora sale?": "What time does the tour depart?", "Acordamos la hora contigo al confirmar la reservación.": "We’ll agree on a departure time when confirming your booking.", "Bahía La Paz Paseos Recreativos": "Bahía La Paz Recreational Boat Tours", "Reservaciones:": "Bookings:", "Cumpleaños, hora preferida…": "Birthday, preferred time…", "Chubasco, el barco de los paseos por la bahía": "Chubasco, the boat used for tours of the bay"};
 const STORAGE_KEY = 'bahiaLaPazLanguage';
 let currentLanguage = 'es';
 const tourWhatsApp = document.querySelector('.ctas a[href^="https://wa.me/"]');
-const floatingWhatsApp = document.querySelector('.wa-float');
 function infoLink(language) {
   const message = language === 'en'
     ? 'Hello, I would like information about the boat tour.'
@@ -279,7 +275,6 @@ function setLanguage(language) {
     button.setAttribute('aria-pressed', String(button.dataset.lang === currentLanguage));
   });
   if(tourWhatsApp) tourWhatsApp.href = infoLink(currentLanguage);
-  if(floatingWhatsApp) floatingWhatsApp.href = infoLink(currentLanguage);
   document.getElementById('usd-reference').hidden = currentLanguage !== 'en';
   document.getElementById('usd-disclaimer').hidden = currentLanguage !== 'en';
   document.title = currentLanguage === 'en' ? 'Bahía La Paz Recreational Boat Tours' : 'Bahía La Paz Paseos Recreativos';
