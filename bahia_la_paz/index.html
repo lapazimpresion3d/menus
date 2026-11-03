@@ -61,6 +61,61 @@ summary{font-weight:600;cursor:pointer}
 details p{margin:.6rem 0 0;color:var(--muted)}
 footer{background:var(--deep);color:var(--on-deep);padding:2rem 0;font-size:.95rem}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+/* Distribución adaptada a teléfonos: conserva intacto el diseño de escritorio. */
+@media (max-width: 600px) {
+  body {font-size: 1rem;line-height: 1.55;}
+  .wrap {padding-inline: 1.35rem;}
+  nav {gap: 1rem;padding: 1rem 0 .65rem;align-items:center;}
+  nav > a:first-child {max-width: 12rem;font-size: .91rem;line-height: 1.25;}
+  nav .btn {white-space:nowrap;font-size:.9rem;padding:.58rem .95rem;}
+  .hero .wrap {padding-top: .15rem;}
+  .hero h1 {font-size: clamp(3.2rem, 12.7vw, 4.6rem);line-height:.98;max-width: 12ch;margin-top: 2.25rem;letter-spacing:-.025em;}
+  .hero p.lead {font-size:1.05rem;line-height:1.6;margin:1.5rem 0 1.65rem;max-width:31rem;}
+  .ctas {display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+  .ctas .btn {display:flex;align-items:center;justify-content:center;text-align:center;min-height:3.15rem;padding:.7rem .8rem;font-size:.95rem;line-height:1.2;}
+  .ctas .btn:first-child {grid-column:1 / -1;}
+  .facts {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;margin:2rem 0 .4rem;}
+  .facts li {font-size:1.08rem;line-height:1.2;min-width:0;padding:.1rem .45rem .1rem 0;}
+  .facts li+li {border-left:1px solid rgba(246,239,224,.24);padding-left:.65rem;}
+  .facts span {font-size:.75rem;line-height:1.35;margin-top:.35rem;}
+  .boat {width:min(360px,82%);margin:1.85rem auto -3.6rem;}
+  .sea {min-height:5.4rem;object-fit:cover;}
+  section {padding:3.6rem 0;}
+  h2 {font-size:clamp(1.85rem,7.6vw,2.35rem);line-height:1.12;margin-bottom:1rem;}
+  .sub {margin-bottom:2rem;line-height:1.6;}
+  .incl {grid-template-columns:1fr;gap:1.3rem;}
+  .incl li {padding-top:1rem;}
+  .incl b {font-size:1.13rem;margin-bottom:.28rem;}
+  .incl span {display:block;line-height:1.5;}
+  .time li {padding:0 0 2rem 1.25rem;}
+  .time li:last-child {padding-bottom:0;}
+  .time b,.time em {display:block;}
+  .time em {margin:.25rem 0 .38rem;font-size:.93rem;}
+  .time .note {display:block;line-height:1.55;}
+  .book {padding:1.4rem;gap:1.6rem;border-radius:18px;}
+  .price {font-size:clamp(1.8rem,8vw,2.25rem);line-height:1.14;}
+  .book .note {margin:.8rem 0 0;}
+  form {gap:1.2rem;}
+  label {gap:.45rem;line-height:1.35;}
+  input,select,textarea {font-size:16px;min-height:3rem;}
+  form .btn {width:100%;min-height:3.2rem;}
+  details {padding:1.15rem 0;}
+  summary {line-height:1.4;padding-right:.5rem;}
+  footer {padding:2.4rem 0 6rem;}
+  footer .wrap {display:grid;gap:.85rem;}
+  footer span {overflow-wrap:anywhere;}
+  .wa-float {right:1rem;bottom:calc(.85rem + env(safe-area-inset-bottom,0px));font-size:.9rem;padding:.68rem 1rem;}
+}
+@media (max-width: 355px) {
+  .wrap {padding-inline:1.05rem;}
+  nav > a:first-child {font-size:.84rem;max-width:10rem;}
+  .hero h1 {font-size:3rem;}
+  .facts {gap:.2rem;}
+  .facts li {font-size:.96rem;}
+  .facts span {font-size:.68rem;}
+  .book {padding:1.1rem;}
+}
 </style>
 </head>
 <body>
